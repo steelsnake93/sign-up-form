@@ -1,0 +1,120 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+
+.odin-img {
+  width: 100%;
+}
+.img-logo {
+  width: auto;
+  height: fit-content;
+position: relative;
+
+}
+
+.main {
+  background-color: #ebedfa;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/scott.jpg");
+  width: 35vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.first {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-left: 5%;
+  margin-bottom: 5% ;
+  height: 33vh;
+}
+
+.second {
+  padding-left: 5%;
+ 
+  background-color: #fff;
+  border-style: solid 1px solid;
+  height: 30vh;
+}
+
+.form-main-div {
+  display: flex;
+  flex-direction: row;
+  margin: 1%;
+  justify-content: space-evenly;
+}
+input {
+  margin-top: 7px;
+  border: 1px solid;
+  height: 25px;
+  width: 225px;
+
+}
+
+.div-form{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+input:focus{
+  border: 1px solid #375cff;
+}
+input:invalid {
+  border: 1px solid #ff0000;
+}
+.third {
+  width: 40%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #37caff;
+}
+.btn {
+  border-radius: 2px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  background-color: #4CAF50;
+  border: none;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.form-heading > h2:nth-child(1) {
+   margin-top: 25px;
+   margin-left: 5%;
+}
+.login {
+  color: #007099;
+}
