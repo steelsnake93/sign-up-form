@@ -6,79 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./styles/style.css">    
-<title>Sign Up Form</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">    
+    <title>Sign Up Form</title>
 </head>
 <body>
-    <div class="main">
+    <div class="wrap-container">
+            
         <div class="left">
-            <div class="img-logo">
-                <img src="./images/odin-lined.png" alt="OdinLogo" class="odin-img" />
-            </div>
-            <div class="img-description">
-            <p class="img-info">
-                Photo by 
-                <a href="https://unsplash.com/@scottrodgerson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-                    Scott Rodgerson</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
-            </div>
+                <div class="img-logo">
+                    <img src="./images/odin-lined.png" alt="OdinLogo" class="odin-img" />
+                </div>
+
+                <div class="img-description">
+                    <p class="img-info">
+                        Photo by 
+                        <a href="https://unsplash.com/@scottrodgerson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                        Scott Rodgerson</a>
+                        on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+                        Unsplash</a>
+                    </p>
+                </div>
+
         </div>
+
         <div class="right">
-            <div class="first">
-            <h1> This is not a real online service! You know you need something like
-                this in your life to help you realize your deepest dreams. Sign up
-                <i>now</i> to get started. <br /><br />
-                You <i>know</i> you want to.
-            </h1>
-            </div>
 
-            <div class="second">
-                <div class="form-heading"><h2>Let's do this!</h2></div><br>
-                <br><br>
-                <form action="" method="get" class="form-main-div">
-                <div class="forms-divs">
-                    <div class="div-form">
-                        <label for="firstName">First Name</label>
-                        <input type="text" name="first_name" id="firstName">
+            <div class="box-one">
+                <h1> This is not a real online service! You know you need something like
+                    this in your life to help you realize your deepest dreams. Sign up
+                    <i>now</i> to get started. <br /><br />
+                    You <i>know</i> you want to.
+                </h1>
+            </div>  
+                
+            <div class="box-two">
+
+                <form method="register" action="/register" name="register">
+                
+                    <div class="column">
+
+                            <div class="first-name input-form">
+                                <label for="first name">First Name</label>
+                                <input type="text" placeholder="Enter your first name" name="first name" required title="Please enter your first name">
+                            </div>
+
+                            <div class="last-name input-form">
+                                <label for="lastname" class="required">Last Name</label>
+                                <input type="text" placeholder="Enter your last name" name="last-name" id="lastname" required title="Please enter your last name">
+                            </div>
+
+                            <div class="email input-form">
+                                <label for="email" class="required">Email</label>
+                                <input type="text" placeholder="you@example.com" name="email" id="email" required title="Please enter your Email">
+                            </div>
+
+                            <div class="phoneNumber input-form">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="number" name="phoneNumber">
+                            </div>
+
+                            <div class="password input-form">
+                                <label for="password" class="required">Password</label>
+                                <input type="text" name="password" id="password" required>
+                            </div>
+
+                            <div class="password input-form">
+                                <label for="confirm-password" class="required">Confirm Password</label>
+                                <input type="text" name="confirm-password" id="confirm-password" required>
+                            </div>
+
                     </div>
 
-                    <div class="div-form">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-
-                    <div class="div-form">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password">
-                    </div>
-                </div>
-
-                <div class="form-divs">
-                    <div class="div-form">
-                        <label for="lastName">Last Name</label>
-                        <input type="text" name="last_name" id="lastName">
-                    </div>
-
-                    <div class="div-form">
-                        <label for="phoneNumber">Phone Number</label>
-                        <input type="tel" name="phoneNumber">
-                    </div>
-
-                    <div class="div-form">
-                        <label for="first name">Confirm Password</label>
-                        <input type="text" name="first name">
-                    </div>
-                </div>
                 </form>
-           </div>
 
-            <div class="third">
-                <button class="btn" type="submit">Create Account</button>
-                <div><h1>Already have an account?<a href="" class="login"> Log In</a></h1></div>
             </div>
+
+            <div class="box-three">
+
+                <div class="register">
+                    <h1>Already have an account?<a href="" class="login"> Log In</a></h1>
+                    <input type="submit" value="Submit" class="button">
+                </div>
+
+            </div>
+
         </div>
+
     </div>
-    <script src="main.js"></script>
+
+<script src="main.js"></script>
 </body>
 </html>

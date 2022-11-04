@@ -1,120 +1,72 @@
-body {
+body{
+  box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+}
+*, *::after, *::before{
+  box-sizing: inherit;
 }
 
-
-.odin-img {
-  width: 100%;
-}
-.img-logo {
-  width: auto;
-  height: fit-content;
-position: relative;
-
-}
-
-.main {
-  background-color: #ebedfa;
+.wrap-container {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: row;
 }
 
+/* left side */
 .left {
+  width: 35%;
+  height: 100%;
+  background-image: url("../images/scott.jpg");
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  background-image: url("../images/scott.jpg");
-  width: 35vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.img-logo{
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  font-size: 2rem;
+  gap: 20px;
+}
+/* END left side */
+
+/* right side */
 .right {
+  width: 65%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 50px;
+  align-items: flex-start;
+}
+.box-one{
+  font-weight: 500;
+  font-size: 1.4em;
+  max-width: 700px;
+  margin-left: 50px;
 }
 
-.first {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  margin-left: 5%;
-  margin-bottom: 5% ;
-  height: 33vh;
-}
-
-.second {
-  padding-left: 5%;
- 
-  background-color: #fff;
-  border-style: solid 1px solid;
-  height: 30vh;
-}
-
-.form-main-div {
+.box-two {
+  height: 500px;  
   display: flex;
   flex-direction: row;
-  margin: 1%;
-  justify-content: space-evenly;
-}
-input {
-  margin-top: 7px;
-  border: 1px solid;
-  height: 25px;
-  width: 225px;
-
+  background-color: #ebedfa;
+  width: 100%;
+  text-align: left;
+  justify-items: space-around;
 }
 
-.div-form{
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-}
-
-input:focus{
-  border: 1px solid #375cff;
-}
-input:invalid {
-  border: 1px solid #ff0000;
-}
-.third {
-  width: 40%;
-  height: 30vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.btn:hover {
-  color: #fff;
-  background-color: #37caff;
-}
-.btn {
-  border-radius: 2px;
-  margin-bottom: 15px;
-  margin-left: 20px;
-  background-color: #4CAF50;
+.register {
+  width: 500px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
   border: none;
-  color: #fff;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-.form-heading > h2:nth-child(1) {
-   margin-top: 25px;
-   margin-left: 5%;
-}
-.login {
-  color: #007099;
+  padding: 20px;
+  text-align: justify;
+  text-transform: uppercase;
 }
