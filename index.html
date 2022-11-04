@@ -15,11 +15,13 @@
     <div class="wrap-container">
             
         <div class="left">
+
                 <div class="img-logo">
                     <img src="./images/odin-lined.png" alt="OdinLogo" class="odin-img" />
                 </div>
 
                 <div class="img-description">
+
                     <p class="img-info">
                         Photo by 
                         <a href="https://unsplash.com/@scottrodgerson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
@@ -27,6 +29,7 @@
                         on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
                         Unsplash</a>
                     </p>
+                    
                 </div>
 
         </div>
@@ -43,39 +46,47 @@
                 
             <div class="box-two">
 
-                <form method="register" action="/register" name="register">
+                <form class="form-box" method="register" action="/register" name="register">
                 
                     <div class="column">
 
-                            <div class="first-name input-form">
-                                <label for="first name">First Name</label>
-                                <input type="text" placeholder="Enter your first name" name="first name" required title="Please enter your first name">
-                            </div>
+                        <div class="column-left">
 
-                            <div class="last-name input-form">
-                                <label for="lastname" class="required">Last Name</label>
-                                <input type="text" placeholder="Enter your last name" name="last-name" id="lastname" required title="Please enter your last name">
-                            </div>
+                                <div class="first-name">
+                                    <label for="first name">First Name</label>
+                                    <input type="text" placeholder="Enter your first name" name="first name" required title="Please enter your first name">
+                                </div>
 
-                            <div class="email input-form">
-                                <label for="email" class="required">Email</label>
-                                <input type="text" placeholder="you@example.com" name="email" id="email" required title="Please enter your Email">
-                            </div>
+                                <div class="email">
+                                    <label for="email" class="required">Email</label>
+                                    <input type="text" placeholder="you@example.com" name="email" id="email" required title="Please enter your Email">
+                                </div>
 
-                            <div class="phoneNumber input-form">
-                                <label for="phoneNumber">Phone Number</label>
-                                <input type="number" name="phoneNumber">
-                            </div>
+                                <div class="password">
+                                    <label for="password" class="required">Password</label>
+                                    <input type="text" name="password" id="password" required>
+                                </div>
 
-                            <div class="password input-form">
-                                <label for="password" class="required">Password</label>
-                                <input type="text" name="password" id="password" required>
-                            </div>
+                        </div>
 
-                            <div class="password input-form">
-                                <label for="confirm-password" class="required">Confirm Password</label>
-                                <input type="text" name="confirm-password" id="confirm-password" required>
-                            </div>
+                        <div class="column-right">
+
+                                <div class="last-name">
+                                    <label for="lastname" class="required">Last Name</label>
+                                    <input type="text" placeholder="Enter your last name" name="last-name" id="lastname" required title="Please enter your last name">
+                                </div>
+
+                                <div class="phoneNumber">
+                                    <label for="phoneNumber">Phone Number</label>
+                                    <input type="number" name="phoneNumber">
+                                </div>
+
+                                <div class="password">
+                                    <label for="confirm-password" class="required">Confirm Password</label>
+                                    <input type="text" name="confirm-password" id="confirm-password" required>
+                                </div>
+
+                        </div>    
 
                     </div>
 
