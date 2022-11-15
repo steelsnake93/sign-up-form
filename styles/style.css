@@ -1,7 +1,6 @@
 body{
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  max-width: 960px;
 }
 *, *::after, *::before{
   box-sizing: inherit;
@@ -27,9 +26,22 @@ body{
   align-items: center;
 }
 
+.logo-back {
+  width: 100%;
+  margin-top: 15rem;
+  height: 30%;
+  background-color: #120303;
+  opacity: 50%;
+}
+
 .img-description {
   display: flex;
   flex-direction: column;
+}
+
+img {
+  max-width:100%;
+  height:auto;
 }
 
 .img-info > a{
@@ -37,9 +49,9 @@ body{
   text-decoration: none;
 }
 .img-logo{
-  width: 100%;
-  display: flex;
-  align-items: inherit;
+  width: auto;
+  text-align: center;
+
   font-size: 2rem;
   gap: 20px;
 }
@@ -47,6 +59,8 @@ body{
 
 /* right side */
 .right {
+  background-color: #ebedfa;
+
   width: 65%;
   height: 100%;
   display: flex;
@@ -63,42 +77,84 @@ body{
 }
 
 .box-two {
-  justify-content: center;
-  height: 500px;  
+  justify-content: space-between;
+  height: 400px;  
   display: flex;
-  flex-direction: row;
-  background-color: #ebedfa;
+  background-color: #dddddd;
   width: 100%;
   text-align: left;
   justify-items: space-around;
 }
 
+.form-box {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3%;
+  justify-content: space-around;
+  margin-left: 50px;
+}
+
 .column {
   display: flex;
   width: 75%;
-
 }
- .column-left {
-  
- }
 
- .column-right {
- }
+.column-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+.column-right {
+   padding-left: 20%;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
 
 .register {
   width: 500px;
   border: 1px solid #dcdcdc;
   border-radius: 10px;
   border: none;
-  padding: 20px;
   text-align: justify;
-  text-transform: uppercase;
 }
 
 .button {
-  width: 150px;
-  height: 40px;
-  border-radius: 5px;
-  margin-top: 15px;
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 10%;
+  cursor: pointer;
+  background-color: #596d48;
+  border: hidden;
+  color: #fff;
 }
 
+.box-three {
+  margin-left: 50px;
+}
+
+.box-two input {
+  border-radius: 5px;
+  border-style: groove;
+  margin: 10px 0;
+  display: flex;
+  width: 250px;
+  height: 45px;
+  padding-left: 15px;
+}
+
+label {
+  padding: 20px 0;
+}
+
+legend {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.login {
+  text-decoration: none;
+  color: rgb(49, 122, 124);
+}
