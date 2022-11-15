@@ -1,24 +1,19 @@
 body{
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  line-height: 1.7em;
-}
-
-  *, *::after, *::before{
-  box-sizing: inherit;
+  line-height: 1.5em;
 }
 
 .wrap-container {
-  align-items: center;
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: row;
 }
 
 /* left side */
 .left {
-  width: 35%;
-  height: 100%;
+  width: 35vw;
   background-image: url("../images/scott.jpg");
   background-position: center;
   background-size: cover;
@@ -26,6 +21,16 @@ body{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.img-logo {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.odin {
+  font-weight: 600;
+  font-size: 4.0rem;
+  color: #fff;
 }
 
 .logo-back {
@@ -35,75 +40,53 @@ body{
   opacity: 50%;
 }
 
-.img-description {
-  display: flex;
-  flex-direction: column;
-}
-
 .odin-img {
   margin: 20px;  
   height: 170px;
   width: 130px;
 }
 
-.img-info > a{
+.img-info, a{
+  font-size: 1.1em;
+  text-align: center;
   color: #fff;
-  text-decoration: none;
 }
 /* END left side */
 
 /* right side */
 .right {
-  background-color: #ebedfa;
-  width: 65%;
-  height: 100%;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 50px;
-  align-items: flex-start;
-}
-.box-one{
-  font-weight: 500;
-  font-size: 1.4em;
-  max-width: 700px;
-  margin-left: 50px;
+  width: 65vw;
 }
 
-.box-two {
-  justify-content: space-between;
-  height: 400px;  
+.box-one{
+  height: 33vh;
   display: flex;
-  background-color: #ffffff;
-  width: 100%;
-  text-align: left;
-  justify-items: space-around;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-weight: 600;
+  font-size: 1.4em;
+  margin-left: 5%;
+  margin-bottom: 5%;
 }
 
 .form-box {
-  display: flex;
-  flex-direction: column;
-  padding-top: 3%;
-  justify-content: space-around;
-  margin-left: 50px;
+  margin: 5%;
+  height: 33vh;
 }
 
 .column {
+  padding-top: 35px;
+  padding-bottom: 30px;
   display: flex;
-  width: 75%;
 }
 
-.column-left {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-.column-right {
-   padding-left: 20%;
-   display: flex;
-   flex-direction: column;
-   width: 100%;
+.column-right, .column-left {
+  display: flex;
+  flex-direction: column;
+  width: 100vh;
 }
 
 .register {
@@ -111,11 +94,11 @@ body{
   border: 1px solid #dcdcdc;
   border-radius: 10px;
   border: none;
-  text-align: justify;
 }
 
 input#submit {
-  font-size: 1.2rem;
+  font-weight: 500;
+  font-size: 1.3em;
   width: 250px;
   height: 50px;
   border-radius: 10px;
@@ -128,23 +111,28 @@ input#submit {
   border-bottom: 2px solid #b2b2b2;
 }
 
-.box-three {
-  margin-left: 50px;
+.box-two{
+  background-color: #e4e4e4;
+  padding-left: 5%;
+  box-shadow: 2px 5px #d7d8d9;
 }
 
 .box-two input {
+  background-color: #d7d8d9;
+  display: flex;
+  flex-direction: row;
   font-size: 120%;
   color: #5a5854;
   background-color: #f2f2f2;
   border: 1px solid #bdbdbd;
   border-radius: 7px;
-  padding: 5px 5px 5px 15px;
+  padding: 5px 5px 5px 10px;
   background-repeat: no-repeat;
   background-position: 8px 9px;
   margin: 5px 0 5px 0;
   display: block;
   width: 250px;
-  height: 35px;
+  height: 30px;
 }
 
 input:focus, input:hover {
@@ -152,17 +140,34 @@ input:focus, input:hover {
   border: 1px solid #b1e1e4;
 }
 
+input:invalid {
+  border: 1px solid rgb(255, 0, 0);
+}
+
 label {
   text-shadow: #7e7d7d;
-  padding: 20px 0;
+  margin: 20px 0 20px 0;
 }
 
 legend {
+  margin-top: 15px;
   font-size: 1.4rem;
   font-weight: 500;
 }
 
 .login {
+  font-weight: 600;
   text-decoration: none;
   color: rgb(49, 122, 124);
+}
+
+.box-three {
+  font-size: 1.3em;
+  margin-top: 25px;
+  margin-left: 5%;
+}
+
+#error {
+  color: rgb(255, 0, 0);
+  font-size: 15px;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,10 +16,11 @@
             
         <div class="left">
 
-            <div class="logo-back">
+                <div class="logo-back">
                     
                     <div class="img-logo">
                         <p id="logo"><img src="./images/odin-lined.png" alt="OdinLogo" class="odin-img"/></p>
+                        <h1 class="odin">ODIN</h1>
                     </div>
 
                 </div>
@@ -41,69 +42,74 @@
         <div class="right">
 
             <div class="box-one">
-                <h1> This is not a real online service! You know you need something like
-                    this in your life to help you realize your deepest dreams. Sign up
-                    <i>now</i> to get started. <br /><br />
-                    You <i>know</i> you want to.
-                </h1>
+                <h2> 
+                    This is not a real online service! You know you need something <br/> 
+                    like this in your life to help you realize your deepest dreams. <br/>
+                    Sign up <em>now</em> to get started.
+                    <br/> <br/>
+                    You <em>know</em> you want to.
+                </h2>
             </div>  
                 
             <div class="box-two">
 
                 <form class="form-box" method="register" action="/register" name="register">
                     
-                    <legend>Register your interest</legend>
+                    <legend>Let's do this!</legend>
 
                     <div class="column">
 
                         <div class="column-left">
-
+                            
                                 <div class="first-name">
-                                    <label for="first name">First Name</label>
+                                    <label for="first name">FIRST NAME</label>
                                     <input type="text" placeholder="Enter your first name" name="first name" required title="Please enter your first name">
                                 </div>
 
                                 <div class="email">
-                                    <label for="email" class="required">Email</label>
-                                    <input type="text" placeholder="you@example.com" name="email" id="email" required title="Please enter your Email">
+                                    <label for="email" class="required">EMAIL</label>
+                                    <input type="email" placeholder="you@example.com" name="email" id="email" required title="Please enter your Email">
                                 </div>
 
                                 <div class="password">
-                                    <label for="password" class="required">Password</label>
-                                    <input type="text" name="password" id="password" size="15" maxlength="30" required>
+                                    <label for="password" class="required">PASSWORD</label>
+                                    <input type="password" name="password" id="password" required>
                                 </div>
-
+                                <p id="error"></p>
+                               
                         </div>
 
                         <div class="column-right">
 
                                 <div class="last-name">
-                                    <label for="lastname" class="required">Last Name</label>
+                                    <label for="lastname" class="required">LAST NAME</label>
                                     <input type="text" placeholder="Enter your last name" name="last-name" id="lastname" required title="Please enter your last name">
                                 </div>
 
-                                <div class="phoneNumber">
-                                    <label for="phoneNumber">Phone Number</label>
-                                    <input type="phone" name="phoneNumber">
+                                <div class="phone">
+                                    <label for="phone">PHONE NUMBER</label>
+                                    <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                                 </div>
 
-                                <div class="password">
-                                    <label for="confirm-password" class="required">Confirm Password</label>
-                                    <input type="text" name="confirm-password" id="confirm-password" size="15" maxlength="30" required>
+                                <div class="confirm-password">
+                                    <label for="confirm-password" class="required">CONFIRM PASSWORD</label>
+                                    <input type="password" name="confirm-password" id="confirm-password" required>
                                 </div>
 
                         </div>    
 
                     </div>
+                    
+                    <input type="submit" value="Create Account" id="submit">
 
                 </form>
-
+                
             </div>
 
             <div class="box-three">
 
                 <div class="register">
-                    <input type="submit" value="Create Account" id="submit">
+                    
                     <h1>Already have an account?<a href="#" class="login"> Log In</a></h1>
                 </div>
 
