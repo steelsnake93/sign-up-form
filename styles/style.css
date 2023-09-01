@@ -1,173 +1,276 @@
-body{
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.5em;
+@font-face {
+  font-family: 'Norse-Bold';
+  src: url('https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf');
 }
 
-.wrap-container {
-  width: 100vw;
+body {
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-family: Arial, sans-serif;
+}
+
+.wraper {
   height: 100vh;
   display: flex;
-  flex-direction: row;
 }
 
-/* left side */
-.left {
-  width: 35vw;
-  background-image: url("../images/scott.jpg");
-  background-position: center;
+.image-sidebar {
+  background-image: url('../images/scott.jpg');
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
 }
-.img-logo {
-  align-items: center;
+
+.logo-section {
+  font-family: 'Norse-Bold';
+  font-size: 4em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, .6);
+  color: white;
+  text-align: center;
   display: flex;
+  width: 100%;
+  height: max-content;
+  align-items: center;
   justify-content: center;
 }
-.odin {
-  font-weight: 600;
-  font-size: 4.0rem;
-  color: #fff;
+
+.logo {
+  margin-right: 20px;
+  width: 3rem;
 }
 
-.logo-back {
+.p {
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
   width: 100%;
-  margin-top: 15rem;
-  background-color: #120303;
-  opacity: 50%;
-}
-
-.odin-img {
-  margin: 20px;  
-  height: 170px;
-  width: 130px;
-}
-
-.img-info, a{
-  font-size: 1.1em;
   text-align: center;
-  color: #fff;
 }
-/* END left side */
 
-/* right side */
-.right {
-  background-color: #f6f6f6;
+.p>a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.p>a:hover {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.signup-container {
   display: flex;
   flex-direction: column;
-  width: 65vw;
+  justify-content: center;
 }
 
-.box-one{
-  height: 33vh;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  font-weight: 600;
-  font-size: 1.4em;
-  margin-left: 5%;
-  margin-bottom: 5%;
+.info-text {
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.box-1 {
+  padding: 20px;
 }
 
 .form-box {
-  margin: 5%;
-  height: 33vh;
-}
-
-.column {
-  padding-top: 35px;
-  padding-bottom: 30px;
-  display: flex;
-}
-
-.column-right, .column-left {
-  display: flex;
-  flex-direction: column;
-  width: 100vh;
-}
-
-.register {
-  width: 500px;
-  border: 1px solid #dcdcdc;
+  position: relative;
+  background-color: white;
+  padding: 20px;
   border-radius: 10px;
-  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input#submit {
-  font-weight: 500;
-  font-size: 1.3em;
-  width: 250px;
-  height: 50px;
-  border-radius: 10px;
-  margin-bottom: 5%;
-  cursor: pointer;
-  background-color: #b9e4e3;
-  border: hidden;
-  color: #444;
-  text-shadow: 0px 1px 1px #ffffff;
-  border-bottom: 2px solid #b2b2b2;
+.form-box>h2 {
+  padding-bottom: 10px;
 }
 
-.box-two{
-  background-color: #e4e4e4;
-  padding-left: 5%;
-  box-shadow: 2px 5px #d7d8d9;
-}
-
-.box-two input {
-  background-color: #d7d8d9;
-  display: flex;
-  flex-direction: row;
-  font-size: 120%;
-  color: #5a5854;
-  background-color: #f2f2f2;
-  border: 1px solid #bdbdbd;
-  border-radius: 7px;
-  padding: 5px 5px 5px 10px;
-  background-repeat: no-repeat;
-  background-position: 8px 9px;
-  margin: 5px 0 5px 0;
+.form-box:before,
+.form-box:after {
+  content: "";
   display: block;
-  width: 250px;
-  height: 30px;
+  height: 2px;
+  background-color: #E5E7EB;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
-input:focus, input:hover {
-  background-color: #ffffff;
-  border: 1px solid #b1e1e4;
+.form-box:before {
+  top: 0;
 }
 
-input:invalid {
-  border: 1px solid rgb(255, 0, 0);
+.form-box:after {
+  bottom: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+      "firstName lastName"
+      "email phone"
+      "password confirmPassword";
+  gap: 20px;
+}
+
+#firstName {
+  grid-area: firstName;
+}
+
+#email {
+  grid-area: email;
+}
+
+#password {
+  grid-area: password;
+}
+
+#lastName {
+  grid-area: lastName;
+}
+
+#phone {
+  grid-area: phone;
+}
+
+#confirmPassword {
+  grid-area: confirmPassword;
 }
 
 label {
-  text-shadow: #7e7d7d;
-  margin: 20px 0 20px 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
-legend {
-  margin-top: 15px;
-  font-size: 1.4rem;
-  font-weight: 500;
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 5px;
+  border: 1px solid #E5E7EB;
+  border-radius: 3px;
+  outline: none;
 }
 
-.login {
-  font-weight: 600;
+input:focus {
+  border-color: blue;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+}
+
+input.error {
+  border-color: red;
+}
+
+.box-3 {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-text {
+  padding-top: 15px;
+}
+
+button {
+  font-size: large;
+  padding: 10px;
+  border-radius: 5px;
+  width: 45%;
+  background-color: #596D48;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4a5a38;
+}
+
+a {
+  color: blue;
   text-decoration: none;
-  color: rgb(49, 122, 124);
 }
 
-.box-three {
-  font-size: 1.3em;
-  margin-top: 25px;
-  margin-left: 5%;
+a:hover {
+  text-decoration: underline;
 }
 
-#error {
-  color: rgb(255, 0, 0);
-  font-size: 15px;
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .wraper {
+      font-size: 0.9rem;
+      flex-direction: column;
+  }
+
+
+  .input-columns {
+      display: flex;
+      flex-direction: column;
+  }
+
+
+  #firstName {
+      order: 1;
+  }
+
+  #lastName {
+      order: 2;
+  }
+
+  #phone {
+      order: 3;
+  }
+
+  #email {
+      order: 4;
+  }
+
+  #password {
+      order: 5;
+  }
+
+  #confirmPassword {
+      order: 6;
+  }
+
+  .image-sidebar {
+      height: 20%;
+  }
+
+  button {
+      width: 100%;
+      padding: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .wraper {
+      font-size: 1.2rem;
+  }
+
+  .image-sidebar {
+      width: 33%;
+  }
+
+  .logo-section {
+
+      height: 22vh;
+  }
+
+  .signup-container {
+      width: 67%;
+  }
 }
